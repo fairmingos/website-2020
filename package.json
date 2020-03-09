@@ -1,0 +1,20 @@
+{
+  "name": "fairmingos_website_2020",
+  "version": "0.0.0",
+  "description": "The Fairmingos team website for the 2020 season",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fairmingos/website-2020.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fairmingos/website-2020/issues"
+  },
+  "homepage": "https://github.com/fairmingos/website-2020#readme"
+}
