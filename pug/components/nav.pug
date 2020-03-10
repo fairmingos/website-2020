@@ -1,0 +1,11 @@
+header
+  h1: a(href='home') Fairmingos
+  button.hamburger
+    - for(var x = 0; x < 4; x++)
+      span
+  nav: ul
+    - var links = ['Home', 'About', 'Contact']
+    - for(var i = 0; i < links.length; i++)
+      li: a(href=links[i].toLowerCase())= links[i]
+      - if(i !== links.length - 1) 
+        hr

@@ -7,8 +7,8 @@
     "dev": "concurrently 'npm:watch' 'npm:serve'",
     "serve": "serve build",
     "watch": "concurrently 'npm:sass-watch' 'npm:pug-watch'",
-    "sass-watch": "sass --watch sass:build/styles",
-    "pug-watch": "pug -w templates -o build",
+    "sass-watch": "sass --watch sass/index.sass:build/styles/index.css",
+    "pug-watch": "pug -w pug/templates -o build",
     "build": "sass sass:build/styles && pug templates -o build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

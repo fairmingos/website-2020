@@ -2,7 +2,10 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
+    title Fairmingos
+    link(rel='icon', href='favicon.ico', type='image/x-icon')
     link(rel='stylesheet', href='styles/index.css')
   body
-    h1 Hi there
+    include components/nav.pug
+    main: block main
+  script(src='scripts/hamburger.js')

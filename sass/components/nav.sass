@@ -1,0 +1,85 @@
+@import ../colors
+
+header
+  display: grid
+  grid-template-columns: auto 100px
+  grid-template-rows: 100px auto
+  background: $secondary
+  h1
+    margin: auto 30px
+    a
+      color: white
+  nav
+    grid-column: 1 / 3
+    position: relative
+    ul
+      list-style: none
+      display: flex
+      flex-direction: column
+      background: $secondary-dark
+      padding: 5px 30px
+      transition: 1s
+      position: absolute
+      top: 0
+      hr
+        border: 1px solid $secondary-darker
+      li
+        margin: 20px 0
+        a
+          font-size: 20px
+          color: white
+
+$button-size: 32
+$bar-height: 6
+
+button
+  width: #{$button-size + 2}px
+  height: #{$button-size}px
+  position: relative
+  background: none
+  margin: auto
+  outline: none
+  cursor: pointer
+  span
+    position: absolute
+    height: #{$bar-height}px
+    background: white
+    left: 0
+    &:nth-child(1)
+      top: 0
+      border-radius: #{$bar-height}px
+      width: #{$button-size + 2}px
+      transition: 0.5s
+    &:nth-child(2)
+      top: #{$button-size / 2 - $bar-height / 2}px
+      width: #{($button-size + 2) / 2}px
+      border-radius: #{$bar-height}px 0 0 #{$bar-height}px
+      transition: 0.5s
+    &:nth-child(3)
+      top: #{$button-size / 2 - $bar-height / 2}px
+      width: #{($button-size + 2) / 2}px
+      left: #{($button-size + 2) / 2}px
+      border-radius: 0 #{$bar-height}px #{$bar-height}px 0
+      transition: 0.5s
+    &:nth-child(4)
+      top: #{$button-size - $bar-height}px
+      border-radius: 4px
+      width: #{$button-size + 2}px
+      transition: 0.5s
+
+button.x
+  span:nth-child(1)
+    transform: scale(0) translate(0, 10px)
+  span:nth-child(2)
+    width: #{$button-size + 2}px
+    transform: rotate(45deg)
+    border-radius: 5px
+  span:nth-child(3)
+    left: 0
+    width: #{$button-size + 2}px
+    transform: rotate(-45deg)
+    border-radius: 5px
+  span:nth-child(4)
+    transform: scale(0) translate(0, -10px)
+  &+ul
+    transform: scale(1, 0)

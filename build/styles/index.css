@@ -1,7 +1,119 @@
+header {
+  display: grid;
+  grid-template-columns: auto 100px;
+  grid-template-rows: 100px auto;
+  background: #267F48;
+}
+header h1 {
+  margin: auto 30px;
+}
+header h1 a {
+  color: white;
+}
+header nav {
+  grid-column: 1/3;
+  position: relative;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background: #164C36;
+  padding: 5px 30px;
+  transition: 1s;
+  position: absolute;
+  top: 0;
+}
+header nav ul hr {
+  border: 1px solid #0F3324;
+}
+header nav ul li {
+  margin: 20px 0;
+}
+header nav ul li a {
+  font-size: 20px;
+  color: white;
+}
+
+button {
+  width: 34px;
+  height: 32px;
+  position: relative;
+  background: none;
+  margin: auto;
+  outline: none;
+  cursor: pointer;
+}
+button span {
+  position: absolute;
+  height: 6px;
+  background: white;
+  left: 0;
+}
+button span:nth-child(1) {
+  top: 0;
+  border-radius: 6px;
+  width: 34px;
+  transition: 0.5s;
+}
+button span:nth-child(2) {
+  top: 13px;
+  width: 17px;
+  border-radius: 6px 0 0 6px;
+  transition: 0.5s;
+}
+button span:nth-child(3) {
+  top: 13px;
+  width: 17px;
+  left: 17px;
+  border-radius: 0 6px 6px 0;
+  transition: 0.5s;
+}
+button span:nth-child(4) {
+  top: 26px;
+  border-radius: 4px;
+  width: 34px;
+  transition: 0.5s;
+}
+
+button.x span:nth-child(1) {
+  transform: scale(0) translate(0, 10px);
+}
+button.x span:nth-child(2) {
+  width: 34px;
+  transform: rotate(45deg);
+  border-radius: 5px;
+}
+button.x span:nth-child(3) {
+  left: 0;
+  width: 34px;
+  transform: rotate(-45deg);
+  border-radius: 5px;
+}
+button.x span:nth-child(4) {
+  transform: scale(0) translate(0, -10px);
+}
+button.x + ul {
+  transform: scale(1, 0);
+}
+
+body {
+  background: #FE938C;
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: Arial;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
 }
 
 /*# sourceMappingURL=index.css.map */
