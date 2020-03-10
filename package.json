@@ -4,6 +4,12 @@
   "description": "The Fairmingos team website for the 2020 season",
   "main": "index.js",
   "scripts": {
+    "dev": "concurrently 'npm:watch' 'npm:serve'",
+    "serve": "serve build",
+    "watch": "concurrently 'npm:sass-watch' 'npm:pug-watch'",
+    "sass-watch": "sass --watch sass:build/styles",
+    "pug-watch": "pug -w templates -o build",
+    "build": "sass sass:build/styles && pug templates -o build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/fairmingos/website-2020/issues"
   },
-  "homepage": "https://github.com/fairmingos/website-2020#readme"
+  "homepage": "https://github.com/fairmingos/website-2020#readme",
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.26.2",
+    "serve": "^11.3.0"
+  }
 }
